@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="header">
+    <image src="/images/worldcup.jpg" class="headImg"></image>
+    <view class="search">
+      <input type="text" class="waybillNo" bindinput="inputNo" value="{{waybillNo}}"></input>
+      <view class="iconGroup" wx:if="{{waybillNo}}">
+        <view class="clear" catchtap="clearNo">
+          <image src="/images/icon/close.png"></image>
+        </view>
+        <view class="line"></view>
+        <view class="searchIcon" catchtap="searchTrack">
+          <image src="/images/icon/search.png"></image>
+        </view>
+      </view>
+      <view class="qrcode" catchtap="scanNo" wx:else>
+        <image src="/images/icon/qr_code.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="main">
+    <text class="title">历史记录</text>
+    <block wx:for="{{records}}" wx:for-item="item">
+      <view class="order">
+        <text class="carrier">{{item.companyName}}</text>
+        <text class="searchTime">{{item.searchTime}}</text>
+        <view class="record" catchtap="showDetail" data-waybillNo="{{item.waybillNo}}">
+          <text class="orderNo">{{item.waybillNo}}</text>
+          <text class="track">{{item.note}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

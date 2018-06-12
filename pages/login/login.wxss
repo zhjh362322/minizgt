@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  margin-bottom: 30rpx;
+  margin-top: 50rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.panel {
+  padding: 20rpx 20rpx 50rpx;
+  width: 90%;
+  box-shadow:0 0 26rpx #F5F5F5 inset;
+}
+.panel view {
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+}
+.line {
+  border-bottom: 1px dotted #c9c9c9;
+}
+/* button {
+  background-color: 
+} */

@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="panel">
+    <view class="header">
+      <text class="carrier">{{record.companyName}}</text>
+      <text class="orderNo">{{record.waybillNo}}</text>
+    </view>
+    <view class="main">
+      <text class="usedTime">{{record.usedTime}}</text>
+      <block wx:for="{{record.data}}">
+        <view class="record">
+          <block wx:if="{{index === 0}}">
+            <icon type="success" size="16"></icon>
+            <text class="track last">{{item.Note}}</text>
+          </block>
+          <block wx:else>
+            <icon></icon>
+            <text class="track">{{item.Note}}</text>
+          </block>
+          <text class="date">{{item.BusinessTime}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

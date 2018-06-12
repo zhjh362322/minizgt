@@ -1,0 +1,19 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+page {
+  font-size: 28rpx;
+}
+.panel {
+  padding: 20rpx 20rpx 30rpx;
+  width: 90%;
+  border-radius: 10rpx;
+  box-shadow:0 0 26rpx #c9c9c9 inset;
+}

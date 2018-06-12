@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/track/track",
+    "pages/personal/personal",
+    "pages/login/login",
+    "pages/track/track-detail/track-detail",
+    "pages/consignment/consignment",
+    "pages/quotation/quotation",
+    "pages/personal/userinfo/userinfo",
+    "pages/personal/shipper/shipper"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "正广通物流",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/track/track",
+        "text": "运单跟踪",
+        "iconPath": "images/icon/search2.png",
+        "selectedIconPath": "images/icon/search2.png"
+      },
+      {
+        "pagePath": "pages/quotation/quotation",
+        "text": "线路报价",
+        "iconPath": "images/icon/compass.png",
+        "selectedIconPath": "images/icon/compass.png"
+      },
+      {
+        "pagePath": "pages/consignment/consignment",
+        "text": "发货下单",
+        "iconPath": "images/icon/dollar_symbol.png",
+        "selectedIconPath": "images/icon/dollar_symbol.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我",
+        "iconPath": "images/icon/computer.png",
+        "selectedIconPath": "images/icon/computer.png"
+      }
+    ]
+  }
+}

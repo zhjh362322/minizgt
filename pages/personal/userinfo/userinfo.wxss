@@ -1,0 +1,14 @@
+.panel {
+  margin: 0 auto;
+}
+.panel view {
+  display: flex;
+  margin-bottom: 15rpx;
+}
+.panel text {
+  display: block;
+  width: 150rpx;
+}
+.panel text:last-child {
+  flex-grow: 1;
+}

@@ -1,0 +1,56 @@
+page {
+  background-color: #F5F5F5;
+}
+.panel {
+  margin: 100rpx auto;
+  padding: 50rpx 20rpx;
+  background-color: #fff;
+}
+.header {
+  margin-bottom: 10rpx;
+  text-align: center;
+  border-bottom: 1px dotted #c9c9c9;
+}
+.header text {
+  display: block;
+  padding: 10rpx;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.record {
+  position: relative;
+  border-left: 1px solid #c9c9c9;
+  padding: 20px 0 20px 20px;
+  width: 90%;
+}
+.record text {
+  display: block;
+}
+icon {
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  margin-top: -8px;
+  width: 8px;
+  height: 8px;
+  background-color: gray;
+  border-radius: 4px;
+}
+icon[type="success"] {
+  left: -8px;
+  margin-top: -16px;
+  z-index: 1;
+  background-color: #fff;
+}
+.date {
+  color: #666;
+  font-size: 24rpx;
+}
+
+.last {
+  color: #0ABA07;
+}

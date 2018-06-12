@@ -1,0 +1,22 @@
+<view class="container">
+  <block wx:for="{{shipper}}">
+    <view class="panel">
+      <view>
+        <text>联系人：</text>
+        <text>{{item.contacts}}</text>
+      </view>
+      <view>
+        <text>电话：</text>
+        <text>{{item.cellphone}}</text>
+      </view>
+      <view>
+        <text>企业名称：</text>
+        <text>{{item.companyName}}</text>
+      </view>
+      <view>
+        <text>详细地址：</text>
+        <text>{{item.address}}</text>
+      </view>
+    </view>
+  </block>
+</view>

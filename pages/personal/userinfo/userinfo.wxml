@@ -1,0 +1,22 @@
+<view class="panel">
+  <view>
+        <text>账号：</text>
+        <text>{{account}}</text>
+      </view>
+      <view>
+        <text>姓名：</text>
+        <text>{{name}}</text>
+      </view>
+      <view>
+        <text>所属公司：</text>
+        <text>{{belong}}</text>
+      </view>
+      <view>
+        <text>出险次数：</text>
+        <text>{{claim}}</text>
+      </view>
+      <view>
+        <text>运单总数：</text>
+        <text>{{orderNum}}</text>
+      </view>
+</view>

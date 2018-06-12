@@ -1,0 +1,42 @@
+page {
+  background-color: #F5F5F5;
+}
+.userinfo {
+  margin-bottom: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500rpx;
+  background-color: #009DDA;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #000;
+}
+.btnGroup image:first-child {
+  width: 48rpx;
+  height: 48rpx;
+}
+.btnGroup image:last-child {
+  width: 24rpx;
+  height: 56rpx;
+}
+.btnGroup view {
+  padding: 25rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+}
+.btnGroup view text {
+  padding-left: 20rpx;
+  flex-grow: 1;
+}

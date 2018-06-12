@@ -1,0 +1,27 @@
+ <view class="container">  
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo}}" bindtap="login"> 登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="btnGroup">
+    <view catchtap="showUserInfo">
+      <image src="../../images/icon/user.png"></image>
+      <text>我的资料</text>
+      <image src="../../images/icon/right_arrow.png"></image>
+    </view>
+    <view catchtap="showShipper" data-shipper="consigner">
+      <image src="../../images/icon/icons8-send.png"></image>
+      <text>发货人</text>
+      <image src="../../images/icon/right_arrow.png"></image>
+    </view>
+    <view catchtap="showShipper" data-shipper="consignee">
+      <image src="../../images/icon/icons8-below.png"></image>
+      <text>收货人</text>
+      <image src="../../images/icon/right_arrow.png"></image>
+    </view>
+    <button bindtap="logout">退出登录</button>
+  </view>
+</view>

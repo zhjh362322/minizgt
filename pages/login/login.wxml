@@ -1,0 +1,15 @@
+<view class="container">
+  <text class="title">登录</text>
+  <view class="panel">
+    <form bindsubmit="formSubmit">
+      <view class="loginInput">
+        <input name="cellphone" placeholder="请输入手机号"></input>
+      </view>
+      <view class="line"></view>
+      <view class="loginInput">
+        <input name="authCode" placeholder="请输入密码"></input>
+      </view>
+      <button type="primary" form-type="submit">登录</button>
+    </form>
+  </view>
+</view>
