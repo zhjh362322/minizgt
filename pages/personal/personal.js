@@ -41,14 +41,14 @@ Page({
     }
   },
   showShipper: function(e) {
-    if (this.data.hasUserInfo) {
+    if (this.data.hasUserInfo && this.data.userInfo.level == 2) {
       var shipper = e.currentTarget.dataset.shipper;
       wx.navigateTo({
         url: './shipper/shipper?shipper=' + shipper
       })
     } else {
       wx.showToast({
-        title: '请先登录',
+        title: '请登录加盟商账号',
         icon: 'none'
       })
     }
