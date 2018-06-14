@@ -21,6 +21,7 @@
 .line {
   border-bottom: 1px dotted #c9c9c9;
 }
-/* button {
-  background-color: 
-} */
+
+.err {
+  color: #bb0000;
+}

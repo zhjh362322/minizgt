@@ -12,12 +12,12 @@
       <text>我的资料</text>
       <image src="../../images/icon/right_arrow.png"></image>
     </view>
-    <view catchtap="showShipper" data-shipper="consigner">
+    <view catchtap="showShipper" data-shipper="1">
       <image src="../../images/icon/icons8-send.png"></image>
       <text>发货人</text>
       <image src="../../images/icon/right_arrow.png"></image>
     </view>
-    <view catchtap="showShipper" data-shipper="consignee">
+    <view catchtap="showShipper" data-shipper="2">
       <image src="../../images/icon/icons8-below.png"></image>
       <text>收货人</text>
       <image src="../../images/icon/right_arrow.png"></image>

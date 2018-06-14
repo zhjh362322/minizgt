@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/track/track",
     "pages/personal/personal",
+    "pages/track/track",
     "pages/login/login",
     "pages/track/track-detail/track-detail",
     "pages/consignment/consignment",
