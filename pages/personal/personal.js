@@ -2,18 +2,13 @@ var app = getApp()
 
 Page({
   data: {
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    userInfo: {}
   },
   onLoad: function () {
-    var userInfo = wx.getStorageSync('userInfo');
-    if (app.globalData.userInfo || userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo || userInfo,
-        hasUserInfo: true
-      })
-    }
+    this.setData({
+      hasUserInfo: app.globalData.hasUserInfo,
+      userInfo: wx.getStorageSync('userInfo')
+    })
   },
   login: function() {
     wx.navigateTo({
@@ -22,14 +17,11 @@ Page({
   },
   logout: function() {
     wx.removeStorageSync('userInfo');
-    app.globalData.userInfo = null;
-    this.setData({
-      userInfo: null,
-      hasUserInfo: false
-    })
+    app.globalData.hasUserInfo = false;
+    this.data.hasUserInfo = false;
   },
   showUserInfo: function() {
-    if(this.data.hasUserInfo) {
+    if (this.data.hasUserInfo) {
       wx.navigateTo({
         url: './userinfo/userinfo',
       })

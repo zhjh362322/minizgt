@@ -1,10 +1,13 @@
  <view class="container">  
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo}}" bindtap="login"> 登录 </button>
+    <!-- <button wx:if="{{!hasUserInfo}}" bindtap="login" open-type="getUserInfo"> 登录 </button>
     <block wx:else>
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+    </block> -->
+    <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+    <open-data type="userNickName" class="userinfo-nickname"></open-data>
+
   </view>
   <view class="btnGroup">
     <view catchtap="showUserInfo">
@@ -22,6 +25,7 @@
       <text>收货人</text>
       <image src="../../images/icon/right_arrow.png"></image>
     </view>
-    <button bindtap="logout">退出登录</button>
+    <button bindtap="logout" wx:if="{{hasUserInfo}}">退出登录</button>
+    <button bindtap="login" type="primary" wx:else>登录</button>
   </view>
 </view>
