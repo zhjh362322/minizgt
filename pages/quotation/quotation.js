@@ -14,53 +14,35 @@ Page({
   onLoad: function (options) {
   
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  getStartCity: function(e) {
+    this.setData({
+      startCity: e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  getEndCity: function (e) {
+    this.setData({
+      endCity: e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+  change: function(e) {
+    var startCity = this.data.startCity;
+    var endCity = this.data.endCity;
+    this.setData({
+      startCity: endCity,
+      endCity: startCity
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
+  getLine: function(e) {
+    
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
+  bindSend: function(e) {
+    wx.navigateTo({
+      url: '../consignment/consignment',
+    })
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  showDetail: function(e) {
+    wx.navigateTo({
+      url: './quotation-detail/quotation-detail',
+    })
   }
 })

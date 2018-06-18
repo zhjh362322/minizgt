@@ -6,7 +6,7 @@ Page({
   },
   onLoad: function () {
     this.setData({
-      hasUserInfo: app.globalData.hasUserInfo,
+      hasUserInfo: app.globalData.hasUserInfo || !!wx.getStorageSync('userInfo'),
       userInfo: wx.getStorageSync('userInfo')
     })
   },
@@ -17,8 +17,12 @@ Page({
   },
   logout: function() {
     wx.removeStorageSync('userInfo');
+    wx.removeStorageSync('consigner');
+    wx.removeStorageSync('consignee');
     app.globalData.hasUserInfo = false;
-    this.data.hasUserInfo = false;
+    this.setData({
+      hasUserInfo: false
+    })
   },
   showUserInfo: function() {
     if (this.data.hasUserInfo) {

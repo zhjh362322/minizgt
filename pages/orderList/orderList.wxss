@@ -1,0 +1,29 @@
+.panel {
+  margin: 0 auto;
+}
+.status {
+  float: right;
+}
+.consigner, .consignee {
+  display: block;
+  margin-top: 10rpx;
+}
+.line {
+  margin: 20rpx 0;
+  border-top: 2rpx dotted #999;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.price {
+  flex-grow: 1;
+  color: red;
+}
+.btn {
+  padding: 0;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}

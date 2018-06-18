@@ -1,13 +1,16 @@
 {
   "pages": [
-    "pages/personal/personal",
     "pages/track/track",
-    "pages/login/login",
     "pages/track/track-detail/track-detail",
-    "pages/consignment/consignment",
     "pages/quotation/quotation",
+    "pages/quotation/quotation-detail/quotation-detail",
+    "pages/orderList/orderList",
+    "pages/orderList/order-detail/order-detail",
+    "pages/personal/personal",
     "pages/personal/userinfo/userinfo",
-    "pages/personal/shipper/shipper"
+    "pages/personal/shipper/shipper",
+    "pages/consignment/consignment",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,8 +33,8 @@
         "selectedIconPath": "images/icon/compass.png"
       },
       {
-        "pagePath": "pages/consignment/consignment",
-        "text": "发货下单",
+        "pagePath": "pages/orderList/orderList",
+        "text": "订单",
         "iconPath": "images/icon/dollar_symbol.png",
         "selectedIconPath": "images/icon/dollar_symbol.png"
       },

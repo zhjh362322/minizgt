@@ -1,0 +1,31 @@
+<image src="/images/worldcup.jpg" class="head-img"></image>
+<view class="header">
+  <text>￥199</text>
+  <text class="vertical-line"></text>
+  <text>已签收</text>
+</view>
+<view class="order">
+  <text class="no">12112415265657</text>
+  <text class="note">dfaewaegaegaegaedfaewaegaegaegaedfaewaegaegaegaedfaewaegaegaegaedfaewaegaega</text>
+</view>
+<view class="panel">
+  <view class="item">
+    <text>清承堂</text>
+    <text>张三</text>
+    <text>15848231231</text>
+    <text>地址</text>
+  </view>
+  <view class="item">
+    <text>清承堂</text>
+    <text>张三</text>
+    <text>15848231231</text>
+    <text>地址</text>
+  </view>
+  <view class="item">
+    <text>热水壶</text>
+    <text>3件</text>
+    <text>1吨</text>
+    <text>1立方</text>
+  </view>
+</view>
+<button class="addNode" type="primary">备注</button>

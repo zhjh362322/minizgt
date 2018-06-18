@@ -29,7 +29,6 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
     hasUserInfo: false,
     host: 'https://mini.zwh56.com'
   }

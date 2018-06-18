@@ -1,0 +1,13 @@
+<view class="panel" bindtap="showDetail">
+  <view>
+    <text class="orderNo">123343534534</text>
+    <text class="status">已签收</text>
+  </view>
+  <text class="consigner">清承堂</text>
+  <text class="consignee">LIVEP</text>
+  <view class="line"></view>
+  <view class="container">
+    <text class="price">￥199</text>
+    <button class="btn" bindtap="bindSend">发货</button>
+  </view>
+</view>
