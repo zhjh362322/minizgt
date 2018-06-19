@@ -2,7 +2,7 @@
   <view class="panel">
     <view class="header">
       <text class="carrier">{{record.companyName}}</text>
-      <text class="orderNo">{{record.waybillNo}}</text>
+      <text class="orderNo" selectable="true">{{record.waybillNo}}</text>
     </view>
     <view class="main">
       <text class="usedTime">{{record.usedTime}}</text>

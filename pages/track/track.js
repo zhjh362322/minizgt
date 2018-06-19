@@ -46,7 +46,7 @@ Page({
   getRecords: function (waybillNo) {
     var that = this;
     // 访问地址
-    var path = app.globalData.host + "/searchOrder";
+    var path = app.globalData.host + "/track";
     var param = "?waybillNo=" + waybillNo;
     var url = path + param;
     // 填充无记录时数据。如果返回数据code等于0或者-1，说明服务器没有对应记录

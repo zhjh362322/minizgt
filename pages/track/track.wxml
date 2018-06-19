@@ -24,7 +24,7 @@
         <text class="carrier">{{item.companyName}}</text>
         <text class="searchTime">{{item.searchTime}}</text>
         <view class="record" catchtap="showDetail" data-waybillNo="{{item.waybillNo}}">
-          <text class="orderNo">{{item.waybillNo}}</text>
+          <text class="orderNo" selectable="true">{{item.waybillNo}}</text>
           <text class="track">{{item.note}}</text>
         </view>
       </view>
