@@ -1,16 +1,8 @@
-// pages/quotation/quotation.js
+var app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
   
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
   
   },
@@ -33,7 +25,17 @@ Page({
     })
   },
   getLine: function(e) {
-    
+    var param = "?from=mini&" + "startCity=" + this.data.startCity + "&endCity=" + this.data.endCity;
+    var path = "/quotation";
+    var url = app.globalData.host + path + param;
+    console.log(url)
+    wx.request({
+      url: url,
+      success: function(res) {
+        var rst = res.data;
+        console.log(rst)
+      }
+    })
   },
   bindSend: function(e) {
     wx.navigateTo({

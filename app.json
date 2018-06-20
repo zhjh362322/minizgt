@@ -1,15 +1,15 @@
 {
   "pages": [
+    "pages/quotation/quotation",
+    "pages/consignment/consignment",
     "pages/track/track",
     "pages/track/track-detail/track-detail",
-    "pages/quotation/quotation",
     "pages/quotation/quotation-detail/quotation-detail",
     "pages/orderList/orderList",
     "pages/orderList/order-detail/order-detail",
     "pages/personal/personal",
     "pages/personal/userinfo/userinfo",
     "pages/personal/shipper/shipper",
-    "pages/consignment/consignment",
     "pages/login/login"
   ],
   "window": {

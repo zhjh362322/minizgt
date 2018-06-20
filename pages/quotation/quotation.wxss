@@ -3,6 +3,7 @@
 }
 .head-img image {
   height: 330rpx;
+  width: 100%;
 }
 .search {
   position: absolute;

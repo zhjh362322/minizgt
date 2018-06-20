@@ -20,7 +20,7 @@
         <image class="like" src="/images/icon/like1.png"></image>
         <text>收藏</text>
       </view>
-      <view class="btn" bindtap="bindSend">发货</view>
+      <view class="btn" catchtap="bindSend">发货</view>
     </view>
   </view>
   

@@ -1,4 +1,4 @@
-// pages/consignment/consignment.js
+var app = getApp();
 Page({
   data: {
     sender: '发货人',
@@ -20,7 +20,7 @@ Page({
         content: '',
         success: function(res) {
           if(res.confirm) {
-            wx.navigateTo({
+            wx.redirectTo({
               url: '../login/login',
             })
           } else {
@@ -34,7 +34,7 @@ Page({
     }
   },
   chooseConsigner: function(e) {
-    var sender = this.data.consignee[e.detail.value].companyName;
+    var sender = this.data.consigner[e.detail.value].companyName;
     this.setData({
       sender: sender
     })
@@ -48,12 +48,33 @@ Page({
   sendOrder: function(e) {
     var formData = e.detail.value;
     var order = {};
-    order.consigner = this.data.consigner[formData.consigner];
-    order.consignee = this.data.consignee[formData.consignee];
+    order.from = 'mini';
+    order.price = formData.price;
+    var consigner = this.data.consigner[formData.consigner];
+    var consignee = this.data.consignee[formData.consignee];
+    order.consigner = consigner['_id'];
+    order.consignee = consignee['_id'];
     delete formData.consigner;
     delete formData.consignee;
     order.cargo = formData;
     console.log(order)
+    wx.request({
+      url: app.globalData.host + '/consignment',
+      data: order,
+      method: 'POST',
+      success: function (res) {
+        var rst = res.data;
+        wx.setStorage({
+          key: 'orderList',
+          data: rst,
+          success: function() {
+            wx.redirectTo({
+              url: '../orderList/orderList',
+            })
+          }
+        })
+      }
+    })
   },
   getPickerData: function(data) {
     var arr = [];

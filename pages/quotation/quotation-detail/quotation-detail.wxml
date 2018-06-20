@@ -1,4 +1,4 @@
-<image src="/images/worldcup.jpg"></image>
+<image class="head-img" src="/images/worldcup.jpg"></image>
 <view class="capacity">
   <text>13.5米</text>
   <text>约30吨</text>

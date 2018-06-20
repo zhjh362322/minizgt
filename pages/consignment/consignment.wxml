@@ -28,7 +28,7 @@
   </view>
   <view class="payable">
       <text>应付多额￥：</text>
-      <text class="money">{{payable}}</text>
+      <input name="price" class="money" value="{{payable}}"></input>
     <button form-type="submit" type="primary" class="btn">发货</button>
   </view>
   </form>
