@@ -1,9 +1,14 @@
 .head-img {
   margin-bottom: 50rpx;
-}
-.head-img image {
   height: 330rpx;
   width: 100%;
+  text-align: center;
+  background-color: #3481EB;
+}
+.head-img image{
+  margin-top: 50rpx;
+  width: 354rpx;
+  height: 129rpx;
 }
 .search {
   position: absolute;
@@ -23,7 +28,7 @@
   color: #fff;
   text-align: center;
   line-height: 70rpx;
-  background-color: blue;
+  background-color: #3481EB;
   border-radius: 50rpx;
 
 }
@@ -42,48 +47,25 @@
 
 .panel {
   margin: 15rpx auto;
+  height: 110rpx;
   background-color: #fff;
 }
 
 .line {
   margin-bottom: 20rpx;
-  display: flex;
-  align-items: center;
-}
-.horizontal-line {
-  margin: 0 10rpx;
-  width: 48rpx;
-  height: 48rpx;
-}
-.line-end {
-  flex-grow: 1;
 }
 
 .price {
+  float: right;
   color: red;
 }
-
-.send {
-  display: flex;
-  align-items: center;
-}
-
-.collect {
-  flex-grow: 1;
-}
-
-.like {
-  margin-right: 5rpx;
-  width: 32rpx;
-  height: 32rpx;
-}
-
 .btn {
-  width: 110rpx;
-  height: 50rpx;
+  float: right;
+  width: 120rpx;
+  height: 60rpx;
   color: #fff;
   text-align: center;
-  line-height: 50rpx;
-  background-color: blue;
+  line-height: 60rpx;
+  background-color: #3481EB;
   border-radius: 5rpx;
 }

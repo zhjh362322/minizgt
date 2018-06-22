@@ -1,0 +1,14 @@
+<template name="model">
+  <view class="model" hidden="{{!isModel}}">
+    <view class="main">
+      <text class="title">编辑备注</text>
+      <view class="content">
+        <input type="text" bindblur="getNote"></input>
+      </view>
+      <view class="btnGroup">
+        <view class="btn" catchtap="noteCancel">取消</view>
+        <view class="btn confirm" data-id="{{id}}" bindtap="noteConfirm">确认</view>
+      </view>
+    </view>
+  </view>
+</template>

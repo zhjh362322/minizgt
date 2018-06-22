@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/quotation/quotation",
     "pages/consignment/consignment",
     "pages/track/track",
-    "pages/track/track-detail/track-detail",
-    "pages/quotation/quotation-detail/quotation-detail",
+    "pages/quotation/quotation",
     "pages/orderList/orderList",
     "pages/orderList/order-detail/order-detail",
+    "pages/track/track-detail/track-detail",
+    "pages/quotation/quotation-detail/quotation-detail",
     "pages/personal/personal",
     "pages/personal/userinfo/userinfo",
     "pages/personal/shipper/shipper",

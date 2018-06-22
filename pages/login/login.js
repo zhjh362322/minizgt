@@ -1,3 +1,4 @@
+// 登录
 var app = getApp();
 Page({
   data: {
@@ -23,6 +24,7 @@ Page({
             err: res.data.msg
           })
         } else {
+          // 根据帐号类型作处理，level是加盟商，信息比较多
           app.globalData.hasUserInfo = true;
           if(res.data.level === 2) {
             that.addStorage(res.data);
@@ -32,7 +34,6 @@ Page({
               data: res.data
             })
           }
-          
           wx.reLaunch({
             url: '../personal/personal',
           })
@@ -40,11 +41,13 @@ Page({
       }
     })
   },
+  // 提取处理登录时获取的数据
   addStorage: function (data) {
     var shippers = data.owner.plant.shipper;
     var userInfo = {};
     var consigner = [];
     var consignee = [];
+    // 根据客户类型区分收、发货人
     for (var i = 0; i < shippers.length; ++i) {
       var s = shippers[i];
       if (s.type == 0) {

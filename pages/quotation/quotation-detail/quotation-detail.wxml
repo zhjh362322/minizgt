@@ -1,26 +1,22 @@
-<image class="head-img" src="/images/worldcup.jpg"></image>
-<view class="capacity">
+<view class="head-img">
+  <image src="/images/logo.png"></image>
+</view>
+<!-- <view class="capacity">
   <text>13.5米</text>
   <text>约30吨</text>
   <text>约130方</text>
-</view>
+</view> -->
 <view class="panel">
   <view class="line">
-    <text>上海</text>
-    <text>——</text>
-    <text>北京</text>
-    <text class="price">￥6500</text>
+    <text>{{q.name}}</text>
+    <text class="price">￥{{q.price}}</text>
   </view>
   <view class="container">
-    <text class="time">14小时</text>
-    <view class="collect">
-      <image class="like" src="/images/icon/like1.png"></image>
-      <text>收藏</text>
-    </view>
+    <text class="time">{{q.time}}小时</text>
   </view>
 </view>
 <view class="contact">
-  <text>郑三</text>
-  <text>15070096571</text>
+  <text>{{q.contacts}}</text>
+  <text>{{q.cellphone}}</text>
 </view>
-<button class="send" type="primary">发货</button>
+<button class="send" type="primary" bindtap="bindSend" data-unitprice="{{q.price}}">发货</button>

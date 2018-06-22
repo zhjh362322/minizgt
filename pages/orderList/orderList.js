@@ -1,75 +1,53 @@
-// pages/orderList/orderList.js
+// 运单列表
+var app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
   
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  // 直接点订单按钮，和新增运单后跳转两个方式进入
   onLoad: function (options) {
-  
+    var that = this;
+    var orderList = wx.getStorageSync("orderList");
+    var userInfo = wx.getStorageSync('userInfo');
+    // 缓存中已有运单列表，直接使用。 新增运单后设置的缓存
+    if (orderList) {
+      this.setData({
+        orderList: orderList
+      })
+    // 登录后直接点击订单按钮， 从数据库获取订单数据
+    } else if(userInfo.level == 2) {
+      var path = app.globalData.host + "/consignment";
+      var param = "?from=mini&uid=" + userInfo._id;
+      wx.request({
+        url: path + param,
+        success: function(res) {
+          that.setData({
+            orderList: res.data
+          })
+          wx.setStorage({
+            key: 'orderList',
+            data: res.data
+          })
+        }
+      })
+    // 非加盟商帐号，没有订单
+    } else {
+      wx.showToast({
+        title: '请登录加盟商帐号',
+      })
+    }
   },
+  // 跳转下单页面
   bindSend: function() {
     wx.navigateTo({
       url: '../consignment/consignment',
     })
   },
-  showDetail: function() {
+  // 查看运单明细
+  showDetail: function(e) {
+    var oid = e.currentTarget.dataset.oid;
     wx.navigateTo({
-      url: './order-detail/order-detail',
+      url: './order-detail/order-detail?oid=' + oid,
     })
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
   }
 })

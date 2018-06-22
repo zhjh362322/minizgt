@@ -1,5 +1,5 @@
 <view class="head-img">
-  <image src="/images/worldcup.jpg"></image>
+   <image src="/images/logo.png"></image> 
 </view>
 <view class="search">
   <input class="startCity" placeholder="起站" value="{{startCity}}" bindblur="getStartCity"></input>
@@ -8,20 +8,13 @@
   <view class="btn-search" bindtap="getLine">搜索</view>
 </view>
 <view class="lineList">
-  <view class="panel" bindtap="showDetail">
-    <view class="line">
-      <text class="line-start">上海</text>
-      <image class="horizontal-line" src="/images/icon/horizontal-line.png"></image>
-      <text class="line-end">北京</text>
-      <text class="price">$6500</text>
-    </view>
-    <view class="send">
-      <view class="collect">
-        <image class="like" src="/images/icon/like1.png"></image>
-        <text>收藏</text>
+  <block wx:for="{{quotation}}">
+    <view class="panel" bindtap="showDetail" data-qid="{{item['_id']}}">
+      <view class="line">
+        <text>{{item.name}}</text>
+        <text class="price">￥{{item.price}}</text>
       </view>
-      <view class="btn" catchtap="bindSend">发货</view>
+      <view class="btn" catchtap="bindSend" data-unitprice="{{item.price}}">发货</view>
     </view>
-  </view>
-  
+  </block>
 </view>

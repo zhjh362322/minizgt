@@ -8,7 +8,7 @@
       </view>
       <view class="line"></view>
       <view class="loginInput">
-        <input name="password" placeholder="请输入密码"></input>
+        <input type="password" name="password" placeholder="请输入密码"></input>
       </view>
       <button type="primary" form-type="submit">登录</button>
     </form>

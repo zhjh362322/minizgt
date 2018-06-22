@@ -1,66 +1,29 @@
-// pages/quotation/quotation-detail/quotation-detail.js
+// 报价明细
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
   
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  // 当前点击的报价明细数据
   onLoad: function (options) {
-  
+    var qid = options.qid;
+    var quotation = wx.getStorageSync("quotation");
+    var q = {};
+    for(var i = 0; i < quotation.length; ++i) {
+      if(quotation[i]._id === qid) {
+        q = quotation[i];
+        break;
+      }
+    }
+    this.setData({
+      q: q
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  // 发货
+  bindSend: function (e) {
+    var unitprice = e.currentTarget.dataset.unitprice;
+    wx.navigateTo({
+      url: '../../consignment/consignment?unitprice=' + unitprice,
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

@@ -1,5 +1,10 @@
+.title {
+  margin-bottom: 20rpx;
+  font-size: 36rpx;
+  text-align: center;
+}
 .panel {
-  margin: 0 auto;
+  margin: 0 auto 15rpx;
 }
 .status {
   float: right;

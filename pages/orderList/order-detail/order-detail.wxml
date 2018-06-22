@@ -1,31 +1,71 @@
+<import src="../../template/model/model-template.wxml" />
 <image src="/images/worldcup.jpg" class="head-img"></image>
 <view class="header">
-  <text>￥199</text>
+  <text>￥{{order.price}}</text>
   <text class="vertical-line"></text>
-  <text>已签收</text>
+  <text>{{order.status == 0 ? '已下单' : '已签收'}}</text>
 </view>
 <view class="order">
-  <text class="no">12112415265657</text>
-  <text class="note">dfaewaegaegaegaedfaewaegaegaegaedfaewaegaegaegaedfaewaegaegaegaedfaewaegaega</text>
+  <text class="no">{{order._id}}</text>
+  <text class="note">{{note}}</text>
 </view>
 <view class="panel">
   <view class="item">
-    <text>清承堂</text>
-    <text>张三</text>
-    <text>15848231231</text>
-    <text>地址</text>
+    <view>
+      <text>发货人</text>
+      <text class="right">{{order.consigner.companyName}}</text>
+    </view>
+    <view>
+      <text>联系人</text>
+      <text class="right">{{order.consigner.contacts}}</text>
+    </view>
+    <view>
+      <text>联系电话</text>
+      <text class="right">{{order.consigner.cellphone}}</text>
+    </view>
+    <view>
+      <text>联系地址</text>
+      <text class="right">{{order.consigner.address}}</text>
+    </view>
   </view>
   <view class="item">
-    <text>清承堂</text>
-    <text>张三</text>
-    <text>15848231231</text>
-    <text>地址</text>
+    <view>
+      <text>收货人</text>
+      <text class="right">{{order.consignee.companyName}}</text>
+    </view>
+    <view>
+      <text>联系人</text>
+      <text class="right">{{order.consignee.contacts}}</text>
+    </view>
+    <view>
+      <text>联系电话</text>
+      <text class="right">{{order.consignee.cellphone}}</text>
+    </view>
+    <view>
+      <text>联系地址</text>
+      <text class="right">{{order.consignee.address}}</text>
+    </view>
   </view>
   <view class="item">
-    <text>热水壶</text>
-    <text>3件</text>
-    <text>1吨</text>
-    <text>1立方</text>
+    <view>
+      <text>货物名称</text>
+      <text class="right">{{order.cargo.cargoName}}</text>
+    </view>
+    <view>
+      <text>件数</text>
+      <text class="right">3</text>
+    </view>
+    <view>
+      <text>重量</text>
+      <text class="right">{{order.cargo.weight}}</text>
+    </view>
+    <view>
+      <text>体积</text>
+      <text class="right">{{order.cargo.volume}}立方</text>
+    </view>
   </view>
 </view>
-<button class="addNode" type="primary">备注</button>
+<button class="addNode" type="primary" bindtap="addNode">备注</button>
+
+<template is="model" data="{{isModel: isModel, id: order._id}}"></template>
+

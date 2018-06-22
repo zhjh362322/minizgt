@@ -1,48 +1,65 @@
 page {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   font-size: 32rpx;
 }
+
 .shipper {
   padding-bottom: 20rpx;
-  background-color: #FFF;
+  background-color: #fff;
 }
+
 .sender, .receiver {
   margin-bottom: 15rpx;
   height: 80rpx;
   line-height: 80rpx;
   text-align: center;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
+
 .cargo {
   padding: 5rpx 0 20rpx;
 }
+
 .cargo > view {
   padding: 15rpx;
   display: flex;
   align-items: center;
-  background-color: #FFF;
+  background-color: #fff;
+}
+.cargo label {
+  width: 150rpx;
+  height: 55rpx;
 }
 .cargo input {
   flex-grow: 1;
   text-align: right;
 }
+
+.err {
+  margin: 30rpx auto;
+  width: 90%;
+  color: #FF0000;
+}
+
 .payable {
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   display: flex;
   align-items: center;
   padding: 0 15rpx;
   width: 100%;
-  background-color: #FFF;
+  background-color: #fff;
 }
+
 .money {
-   flex-grow: 1; 
+  flex-grow: 1;
 }
+
 .btn {
   width: 200rpx;
   height: 80rpx;
   line-height: 80rpx;
-  color: #FFF;
+  color: #fff;
   font-size: 36rpx;
   border-radius: 0;
 }
