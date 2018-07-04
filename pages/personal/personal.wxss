@@ -8,7 +8,7 @@ page {
   align-items: center;
   justify-content: center;
   height: 400rpx;
-  background-color: #009DDA;
+  background-color: #3581eb;
 }
 
 .userinfo-avatar {

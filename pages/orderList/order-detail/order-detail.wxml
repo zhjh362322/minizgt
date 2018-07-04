@@ -1,12 +1,12 @@
 <import src="../../template/model/model-template.wxml" />
-<image src="/images/worldcup.jpg" class="head-img"></image>
+<view class="top"></view>
 <view class="header">
   <text>￥{{order.price}}</text>
   <text class="vertical-line"></text>
   <text>{{order.status == 0 ? '已下单' : '已签收'}}</text>
 </view>
 <view class="order">
-  <text class="no">{{order._id}}</text>
+  <text class="no">{{order.no}}</text>
   <text class="note">{{note}}</text>
 </view>
 <view class="panel">

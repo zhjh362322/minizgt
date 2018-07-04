@@ -1,8 +1,9 @@
 <view class="container">
   <view class="header">
-    <view class="headImg">
+    <!-- <view class="headImg">
       <image src="/images/logo.png"></image>
-    </view>
+    </view> -->
+    <image class="headImg" src="http://zgt.zwh56.com/images/1.jpeg"></image>
     <view class="search">
       <input type="text" class="waybillNo" bindinput="inputNo" value="{{waybillNo}}"></input>
       <view class="iconGroup" wx:if="{{waybillNo}}">

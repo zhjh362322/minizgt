@@ -1,6 +1,4 @@
-<view class="head-img">
-  <image src="/images/logo.png"></image>
-</view>
+<image class="head-img" src="http://zgt.zwh56.com/images/1.jpeg"></image>
 <!-- <view class="capacity">
   <text>13.5米</text>
   <text>约30吨</text>

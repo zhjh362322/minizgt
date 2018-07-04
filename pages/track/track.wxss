@@ -4,22 +4,14 @@ page {
 
 .header {
   width: 100%;
-  height: 500rpx;
+  height: 340rpx;
 }
 .headImg {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100%; 
   height: 330rpx;
-  text-align: center;
-  background-color: #3481EB;
 }
-.headImg image {
-  margin-top: 50rpx;
-  width: 354rpx;
-  height: 129rpx;
-}
-
 .search {
   position: fixed;
   top: 200rpx;
@@ -72,7 +64,7 @@ page {
 .title {
   display: block;
   padding: 20rpx 20rpx;
-  font-size: 32rpx;
+  font-size: 24rpx;
 }
 .order {
   margin-bottom: 20rpx;

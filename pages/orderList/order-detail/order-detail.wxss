@@ -1,12 +1,12 @@
 @import "../../template/model/model-template.wxss";
-.head-img {
-  width: 100%;
-  height: 150rpx;
+.top {
+  height: 230rpx;
+  background-color: #3581eb;
 }
 .header {
   position: absolute;
   left: 50%;
-  top: 120rpx;
+  top: 60rpx;
   z-index: 1; 
   margin-left: -175rpx;
   background: rgba(255, 255, 255, .8);
@@ -22,7 +22,7 @@
   border: 1px solid #999;
 }
 .order {
-  margin: 80rpx auto 30rpx;
+  margin: 30rpx auto 30rpx;
   display: flex;
   flex-direction: column;
   width: 90%;

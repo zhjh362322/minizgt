@@ -7,14 +7,32 @@ Page({
   // 的查询历史的，就显示
   onLoad: function (options) {
     var that = this;
-    wx.getStorage({
-      key: 'quotation',
-      success: function(res) {
-        that.setData({
-          quotation: res.data
-        })
-      },
-    })
+    var quotation = wx.getStorageSync('quotation');
+    var path = "/quotation";
+    var param = "?from=mini";
+    var url = app.globalData.host + path + param;
+    
+    if(quotation) {
+      this.setData({
+        quotation: quotation
+      })
+    } else {
+      var path = "/quotation";
+      var url = app.globalData.host + path;
+      wx.request({
+        url: url,
+        success: function (res) {
+          var rst = res.data;
+          that.setData({
+            quotation: rst
+          })
+          wx.setStorage({
+            key: 'quotation',
+            data: rst,
+          })
+        }
+      })
+    }
   },
   // 输入的起站数据
   getStartCity: function(e) {

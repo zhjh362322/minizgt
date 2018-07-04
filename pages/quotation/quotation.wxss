@@ -2,13 +2,6 @@
   margin-bottom: 50rpx;
   height: 330rpx;
   width: 100%;
-  text-align: center;
-  background-color: #3481EB;
-}
-.head-img image{
-  margin-top: 50rpx;
-  width: 354rpx;
-  height: 129rpx;
 }
 .search {
   position: absolute;

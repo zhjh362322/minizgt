@@ -1,6 +1,4 @@
-<view class="head-img">
-   <image src="/images/logo.png"></image> 
-</view>
+<image class="head-img" src="http://zgt.zwh56.com/images/1.jpeg"></image> 
 <view class="search">
   <input class="startCity" placeholder="起站" value="{{startCity}}" bindblur="getStartCity"></input>
   <image class="change" src="/images/icon/switch.png" bindtap="change"></image>

@@ -7,15 +7,9 @@ Page({
   // 直接点订单按钮，和新增运单后跳转两个方式进入
   onLoad: function (options) {
     var that = this;
-    var orderList = wx.getStorageSync("orderList");
     var userInfo = wx.getStorageSync('userInfo');
     // 缓存中已有运单列表，直接使用。 新增运单后设置的缓存
-    if (orderList) {
-      this.setData({
-        orderList: orderList
-      })
-    // 登录后直接点击订单按钮， 从数据库获取订单数据
-    } else if(userInfo.level == 2) {
+    if(userInfo.level == 2) {
       var path = app.globalData.host + "/consignment";
       var param = "?from=mini&uid=" + userInfo._id;
       wx.request({

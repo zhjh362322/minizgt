@@ -2,19 +2,7 @@
   margin-bottom: 50rpx;
   height: 330rpx;
   width: 100%;
-  text-align: center;
-  background-color: #3481EB;
 }
-.head-img image{
-  margin-top: 80rpx;
-  width: 354rpx;
-  height: 129rpx;
-}
-/* .capacity {
-  margin: 20rpx 0;
-  display: flex;
-  justify-content: space-around;
-} */
 .panel {
   margin: 15rpx auto;
 }

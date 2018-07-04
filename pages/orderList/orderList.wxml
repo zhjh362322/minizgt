@@ -1,8 +1,8 @@
 <block wx:for="{{orderList}}">
   <view class="panel" bindtap="showDetail" data-oid="{{item._id}}">
     <view>
-      <text class="orderNo">{{item._id}}</text>
-      <text class="status">{{order.status == 0 ? '已下单' : '已签收'}}</text>
+      <text class="orderNo">{{item.no}}</text>
+      <text class="status">{{item.status == 0 ? '已下单' : '已签收'}}</text>
     </view>
     <text class="consigner">{{item.consigner.companyName}}</text>
     <text class="consignee">{{item.consignee.companyName}}</text>
