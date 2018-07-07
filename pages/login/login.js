@@ -18,7 +18,6 @@ Page({
       data: params,
       method: 'POST',
       success: function(res) {
-        console.log(res)
         // code=0账号密码不匹配
         if(res.data.code == 0) {
           that.setData({
@@ -73,6 +72,11 @@ Page({
     wx.setStorage({
       key: 'userInfo',
       data: data
+    })
+  },
+  register: function(e) {
+    wx.navigateTo({
+      url: '../basic/newPlant/newPlant',
     })
   }
 })

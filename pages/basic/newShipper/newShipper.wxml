@@ -1,0 +1,44 @@
+<view class="container">
+  <form bindsubmit="newShipper">
+    <view class="item">
+      <label>客户名称</label>
+      <input name="companyName"></input>
+    </view>
+    <view class="item">
+      <label>联系人</label>
+      <input name="contacts"></input>
+    </view>
+    <view class="item">
+      <label>联系电话</label>
+      <input name="cellphone"></input>
+    </view>
+    <view class="item">
+      <label>客户类型</label>
+      <picker bindchange="chooseType" range="{{type}}" value="{{index}}" name="type">
+        <view>
+          <text>{{type[index]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="item">
+      <label>选择地区</label>
+      <picker mode="region" value="{{region}}" name="region" bindchange="chooseRegion">
+        <view class="picker">
+          {{region[0]}} {{region[1]}} {{region[2]}}
+        </view>
+      </picker>
+      <image src="../../../images/icon/location.png" class="location" bindtap="chooseLocation"></image>
+    </view>
+    <view class="item">
+      <label>详细地址</label>
+      <textarea name="address" value="{{address}}" class="address"></textarea>
+    </view>
+    <button form-type="submit" type="primary" class="btn">添加</button>
+  </form>
+  <block wx:for="{{error}}">
+    <view class="err">
+      <!-- <text>{{item.param}}</text> -->
+      <text>{{item.msg}}</text>
+    </view>
+  </block>
+</view>

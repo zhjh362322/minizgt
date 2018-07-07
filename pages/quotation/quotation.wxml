@@ -1,10 +1,22 @@
-<image class="head-img" src="http://zgt.zwh56.com/images/1.jpeg"></image> 
+<!-- <image class="head-img" src="http://zgt.zwh56.com/images/1.jpeg"></image> -->
+<swiper autoplay="true" class="head">
+  <swiper-item>
+    <image src="http://zgt.zwh56.com/uploads/swiper/1.jpeg" class="head-img"/>
+  </swiper-item>
+  <swiper-item>
+    <image src="http://zgt.zwh56.com/uploads/swiper/2.jpeg" class="head-img"/>
+  </swiper-item>
+  <swiper-item>
+    <image src="http://zgt.zwh56.com/uploads/swiper/3.jpeg" class="head-img"/>
+  </swiper-item>
+</swiper>
 <view class="search">
   <input class="startCity" placeholder="起站" value="{{startCity}}" bindblur="getStartCity"></input>
   <image class="change" src="/images/icon/switch.png" bindtap="change"></image>
   <input class="endCity" placeholder="到站" value="{{endCity}}" bindblur="getEndCity"></input>
   <view class="btn-search" bindtap="getLine">搜索</view>
 </view>
+ <!-- bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend" -->
 <view class="lineList">
   <block wx:for="{{quotation}}">
     <view class="panel" bindtap="showDetail" data-qid="{{item['_id']}}">
@@ -12,7 +24,10 @@
         <text>{{item.name}}</text>
         <text class="price">￥{{item.price}}</text>
       </view>
-      <view class="btn" catchtap="bindSend" data-unitprice="{{item.price}}">发货</view>
+      <view>
+        <text class="time">{{item.time}} 小时</text>
+        <view class="btn" catchtap="bindSend" data-unitprice="{{item.price}}">发货</view>
+      </view>
     </view>
   </block>
 </view>

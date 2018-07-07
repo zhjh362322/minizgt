@@ -25,5 +25,10 @@ Page({
         },
       })
     }
+  },
+  addShipper: function() {
+    wx.navigateTo({
+      url: '../../basic/newShipper/newShipper',
+    })
   }
 })

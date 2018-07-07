@@ -1,5 +1,5 @@
 .panel {
-  margin: 0 auto;
+  margin: 15rpx auto;
 }
 .panel view {
   display: flex;

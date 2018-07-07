@@ -15,5 +15,5 @@ page {
   padding: 20rpx 20rpx 30rpx;
   width: 90%;
   border-radius: 10rpx;
-  box-shadow:0 0 26rpx #c9c9c9 inset;
+  box-shadow:0 0 20rpx #c9c9c9;
 }

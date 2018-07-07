@@ -21,7 +21,12 @@
 .line {
   border-bottom: 1px dotted #c9c9c9;
 }
-
+.register {
+  margin: 0 auto;
+  width: 300rpx;
+  cursor: pointer;
+  color: gray;
+}
 .err {
   color: #bb0000;
 }

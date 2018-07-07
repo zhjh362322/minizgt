@@ -28,7 +28,6 @@ page {
 }
 .cargo label {
   width: 150rpx;
-  height: 55rpx;
 }
 .cargo input {
   flex-grow: 1;

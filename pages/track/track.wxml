@@ -3,7 +3,7 @@
     <!-- <view class="headImg">
       <image src="/images/logo.png"></image>
     </view> -->
-    <image class="headImg" src="http://zgt.zwh56.com/images/1.jpeg"></image>
+    <image class="headImg" src="http://zgt.zwh56.com/uploads/headpic.jpeg"></image>
     <view class="search">
       <input type="text" class="waybillNo" bindinput="inputNo" value="{{waybillNo}}"></input>
       <view class="iconGroup" wx:if="{{waybillNo}}">

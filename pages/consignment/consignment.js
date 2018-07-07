@@ -48,10 +48,12 @@ Page({
   },
   // 设置收货人选择器数据
   chooseConsignee: function (e) {
-    var consignee = this.data.consignee[e.detail.value].companyName;
-    this.setData({
-      receiver: consignee
-    })
+    if (this.data.consignee) {
+      var consignee = this.data.consignee[e.detail.value].companyName;
+      this.setData({
+        receiver: consignee
+      })
+    }
   },
   // 提交表单
   sendOrder: function (e) {

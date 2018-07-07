@@ -39,10 +39,8 @@
   margin: 0 auto 100rpx;
 }
 .item {
-  /* display: flex;
-  flex-direction: column; */
   padding: 10rpx 10rpx;
-  border-bottom: 1px solid #F5F5F5;
+  border-bottom: 1px dotted #C9C9C9;
 }
 .item text {
   line-height: 48rpx;

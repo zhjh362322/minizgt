@@ -1,24 +1,19 @@
 .head-img {
-  margin-bottom: 50rpx;
-  height: 330rpx;
+  margin-bottom: 30rpx;
+  height: 450rpx;
   width: 100%;
 }
-.panel {
-  margin: 15rpx auto;
-}
-.line {
-  margin-bottom: 10rpx;
-}
-.price {
-  float: right;
-}
-.contact {
-  margin-top: 30rpx;
+.capacity {
+  display: flex;
+  margin: 200rpx auto 60rpx;
+  width: 90%;
+  justify-content: space-around;
+  font-size: 36rpx;
 }
 .contact text{
   display: block;
   text-align: center;
-  font-size: 40rpx;
+  font-size: 48rpx;
 }
 .send {
   position: absolute;
@@ -27,4 +22,34 @@
   height: 80rpx;
   line-height: 80rpx;
   border-radius: 0;
+  background-color: #3B99FC;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.line, .price, .time {
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 150rpx;
+  text-align: center;
+  line-height: 150rpx;
+  color: #FFF;
+  font-weight: bold;
+}
+.line {
+  top: 480rpx;
+  left: 0;
+  background-color: green;
+}
+.time {
+  top: 480rpx;
+  right: 0;
+  background-color: blue;
+}
+.price {
+  left: 50%;
+  bottom: 90rpx;
+  margin-left: -75rpx;
+  background-color: red;
 }

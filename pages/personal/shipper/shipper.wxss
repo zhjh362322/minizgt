@@ -12,3 +12,14 @@
 .panel text:last-child {
   flex-grow: 1;
 }
+.addShipper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 0;
+  background-color: #3B99FC;
+  color: #FFF;
+  font-weight: bold;
+}

@@ -20,3 +20,4 @@
     </view>
   </block>
 </view>
+<button class="addShipper" bindtap="addShipper">新增客商</button>

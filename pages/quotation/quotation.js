@@ -8,9 +8,6 @@ Page({
   onLoad: function (options) {
     var that = this;
     var quotation = wx.getStorageSync('quotation');
-    var path = "/quotation";
-    var param = "?from=mini";
-    var url = app.globalData.host + path + param;
     
     if(quotation) {
       this.setData({
@@ -18,7 +15,8 @@ Page({
       })
     } else {
       var path = "/quotation";
-      var url = app.globalData.host + path;
+      var param = "?from=mini";
+      var url = app.globalData.host + path + param;
       wx.request({
         url: url,
         success: function (res) {

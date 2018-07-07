@@ -9,7 +9,7 @@
     <view class="line"></view>
     <view class="container">
       <text class="price">￥{{item.price}}</text>
-      <button class="btn" catchtap="bindSend">发货</button>
+      <button class="btn" catchtap="bindSend">再次下单</button>
     </view>
   </view>
 </block>

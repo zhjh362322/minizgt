@@ -12,5 +12,6 @@
       </view>
       <button type="primary" form-type="submit">登录</button>
     </form>
+     <view class="register" bindtap="register">没有账号，点击注册</view> 
   </view>
 </view>

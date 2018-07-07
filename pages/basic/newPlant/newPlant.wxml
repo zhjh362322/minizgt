@@ -1,0 +1,29 @@
+<form bindsubmit="register">
+  <view class="item">
+    <label>用户名</label>
+    <input name="cellphone"></input>
+  </view>
+  <view class="item">
+    <label>姓名</label>
+    <input name="name"></input>
+  </view>
+  <view class="item">
+    <label>邮箱</label>
+    <input name="email"></input>
+  </view>
+  <view class="item">
+    <label>归属公司</label>
+    <picker bindchange="chooseCompany" range="{{company}}" value="{{company[index]._id}}" range-key="name" name="company">
+      <view>
+        <text>{{company[index].name}}</text>
+      </view>
+    </picker>
+  </view>
+  <button form-type="submit" type="primary" class="btn">添加</button>
+</form>
+<block wx:for="{{error}}">
+  <view class="err">
+    <!-- <text>{{item.param}}</text> -->
+    <text>{{item.msg}}</text>
+  </view>
+</block>

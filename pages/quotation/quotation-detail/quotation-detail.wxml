@@ -1,20 +1,24 @@
-<image class="head-img" src="http://zgt.zwh56.com/images/1.jpeg"></image>
-<!-- <view class="capacity">
-  <text>13.5米</text>
-  <text>约30吨</text>
-  <text>约130方</text>
-</view> -->
-<view class="panel">
-  <view class="line">
-    <text>{{q.name}}</text>
-    <text class="price">￥{{q.price}}</text>
-  </view>
-  <view class="container">
-    <text class="time">{{q.time}}小时</text>
-  </view>
+<text>{{img.url}}</text>
+<image class="head-img" src="{{q.headimg}}"></image>
+
+<view class="line">
+  <text>{{q.name}}</text>
 </view>
+<view class="price">
+  <text>￥{{q.price}}</text>
+</view>
+<view class="time">
+  <text>{{q.time}}小时</text>
+</view>
+
+<view class="capacity">
+  <text>{{q.car.carNo}}</text>
+  <text>可载重量:{{q.car.weight}}</text>
+  <text>可载体积:{{q.car.volume}}</text>
+</view>
+
 <view class="contact">
   <text>{{q.contacts}}</text>
   <text>{{q.cellphone}}</text>
 </view>
-<button class="send" type="primary" bindtap="bindSend" data-unitprice="{{q.price}}">发货</button>
+<button class="send" bindtap="bindSend" data-unitprice="{{q.price}}">点我发货</button>

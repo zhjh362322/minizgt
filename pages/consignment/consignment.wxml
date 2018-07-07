@@ -23,11 +23,11 @@
       </view>
       <view>
         <label>重量</label>
-        <input name="weight" placeholder="重量"></input>
+        <input name="weight" placeholder="重量" type="digit"></input>
       </view>
       <view>
         <label>体积</label>
-        <input name="volume" placeholder="体积"></input>
+        <input name="volume" placeholder="体积" type="digit"></input>
       </view>
     </view>
     <block wx:for="{{error}}">
@@ -38,8 +38,8 @@
     </block>
     <view class="payable">
       <text>预估费用￥：</text>
-      <input name="price" class="money" value="{{payable}}"></input>
-      <button form-type="submit" type="primary" class="btn">发货</button>
+      <input name="price" class="money" value="{{payable}}" type="digit"></input>
+      <button form-type="submit" type="primary" class="btn">确认下单</button>
     </view>
   </form>
 </view>

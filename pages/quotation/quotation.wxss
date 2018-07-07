@@ -1,33 +1,38 @@
+page {
+  background-color: #F5F5F5;
+}
+.head {
+  height: 360rpx;
+}
 .head-img {
-  margin-bottom: 50rpx;
-  height: 330rpx;
+  height: 360rpx;
   width: 100%;
 }
 .search {
   position: absolute;
-  top: 200rpx;
+  top: 170rpx;
   margin: 20rpx 40rpx;
   display: flex;
   align-items: center;
-  background-color: rgba(220, 220, 220, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .btn-search {
   position: absolute;
-  top: 70rpx;
+  top: 90rpx;
   left: 50%;
   margin-left: -150rpx;
   width: 300rpx;
-  height: 70rpx;
+  height: 90rpx;
   color: #fff;
+  font-size: 32rpx;
   text-align: center;
-  line-height: 70rpx;
-  background-color: #3481EB;
-  border-radius: 50rpx;
-
+  line-height: 90rpx;
+  background-color: #3B99FC;
+  box-shadow: 0 5rpx 10rpx 0 #7ABAFC; 
 }
 .search input {
   flex-grow: 1;
-  padding: 10rpx 5rpx;
+  padding: 20rpx 5rpx;
   font-size: 32rpx;
   text-align: center;
   height: 60rpx;
@@ -38,19 +43,27 @@
   height: 48rpx;
 }
 
+.lineList {
+  margin-top: 50rpx;
+}
+
 .panel {
-  margin: 15rpx auto;
-  height: 110rpx;
+  margin: 10rpx auto 20rpx;
+  height: 120rpx;
   background-color: #fff;
 }
 
 .line {
   margin-bottom: 20rpx;
+  font-size: 32rpx;
 }
 
 .price {
   float: right;
   color: red;
+}
+.time {
+  line-height: 60rpx;
 }
 .btn {
   float: right;
@@ -59,6 +72,6 @@
   color: #fff;
   text-align: center;
   line-height: 60rpx;
-  background-color: #3481EB;
+  background-color: #3B99FC;
   border-radius: 5rpx;
 }

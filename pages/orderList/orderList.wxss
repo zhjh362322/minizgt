@@ -1,20 +1,21 @@
-.title {
+/* .title {
   margin-bottom: 20rpx;
   font-size: 36rpx;
   text-align: center;
-}
+} */
 .panel {
-  margin: 0 auto 15rpx;
+  margin: 15rpx auto;
 }
 .status {
   float: right;
+  color: red;
 }
 .consigner, .consignee {
   display: block;
-  margin-top: 10rpx;
+  margin-top: 20rpx;
 }
 .line {
-  margin: 20rpx 0;
+  margin: 30rpx 0;
   border-top: 2rpx dotted #999;
 }
 .container {
@@ -23,12 +24,17 @@
 }
 .price {
   flex-grow: 1;
+  font-size: 36rpx;
   color: red;
+  font-weight: bold;
 }
 .btn {
-  padding: 0;
-  width: 150rpx;
-  height: 50rpx;
-  line-height: 50rpx;
+  width: 200rpx;
+  height: 60rpx;
   font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #3B99FC;
+  border-radius: 5rpx;
 }
