@@ -4,7 +4,7 @@
   <view class="panel">
     <form bindsubmit="formSubmit">
       <view class="loginInput">
-        <input name="uid" placeholder="请输入手机号"></input>
+        <input name="uid" placeholder="请输入用户名"></input>
       </view>
       <view class="line"></view>
       <view class="loginInput">
@@ -14,4 +14,10 @@
     </form>
      <view class="register" bindtap="register">没有账号，点击注册</view> 
   </view>
+  <block wx:for="{{error}}">
+    <view class="err">
+      <!-- <text>{{item.param}}</text> -->
+      <text>{{item.msg}}</text>
+    </view>
+  </block>
 </view>

@@ -18,6 +18,7 @@ Page({
           that.setData({
             orderList: res.data
           })
+          // 这个缓存给查看明细时使用，减少请求
           wx.setStorage({
             key: 'orderList',
             data: res.data

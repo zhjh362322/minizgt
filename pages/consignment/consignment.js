@@ -86,16 +86,9 @@ Page({
         data: order,
         method: 'POST',
         success: function (res) {
-          var rst = res.data;
           // 添加成功，设置缓存并跳转列表
-          wx.setStorage({
-            key: 'orderList',
-            data: rst,
-            success: function () {
-              wx.reLaunch({
-                url: '../orderList/orderList',
-              })
-            }
+          wx.reLaunch({
+            url: '../orderList/orderList',
           })
         }
       })
@@ -123,16 +116,18 @@ Page({
         required: true
       },
       num: {
+        required: true,
         digits: true
       },
       weight: {
-        digits: true
+        number: true
       },
       volume: {
-        digits: true
+        number: true
       },
       price: {
-        digits: true
+        required: true,
+        number: true
       }
     }
     var message = {
@@ -146,16 +141,18 @@ Page({
         required: '请填写货物名称'
       },
       num: {
-        digits: '件数需要数值'
+        required: '请输入件数',
+        digits: '件数需要整数'
       },
       weight: {
-        digits: '重量需要数值'
+        number: '重量需要数值'
       },
       volume: {
-        digits: '体积需要数值'
+        number: '体积需要数值'
       },
       price: {
-        digits: '预估费用需要数值'
+        required: '请输入预估费用',
+        number: '预估费用需要数值'
       }
     }
     var validate = new WxValidate(rules, message);

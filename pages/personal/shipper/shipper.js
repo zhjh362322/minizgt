@@ -27,8 +27,16 @@ Page({
     }
   },
   addShipper: function() {
-    wx.navigateTo({
-      url: '../../basic/newShipper/newShipper',
+    wx.getSetting({
+      success: res => {
+        if (!res.authSetting['scope.userLocation']) {
+          wx.openSetting({})
+        } else {
+          wx.navigateTo({
+            url: '../../basic/newShipper/newShipper',
+          })
+        }
+      }
     })
   }
 })

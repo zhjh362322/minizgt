@@ -7,15 +7,22 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
-    wx.request({
-      url: app.globalData.host + '/company',
-      success: function(res) {
-        wx.setStorageSync('company', res.data);
-        that.setData({
-          company: res.data
-        })
-      }
-    })
+    var company = wx.getStorageSync('company');
+    if (company) {
+      this.setData({
+        company: company
+      })
+    } else {
+      wx.request({
+        url: app.globalData.host + '/company',
+        success: function (res) {
+          wx.setStorageSync('company', res.data);
+          that.setData({
+            company: res.data
+          })
+        }
+      })
+    }  
   },
   chooseCompany: function(e) {
     var idx = e.detail.value;
@@ -47,18 +54,26 @@ Page({
   getValidate: function () {
     var rules = {
       cellphone: {
-        required: true
+        required: true,
+        tel: true
       },
       name: {
         required: true
+      },
+      email: {
+        email: true
       }
     }
     var message = {
       cellphone: {
-        required: '请填写用户名'
+        required: '请填写手机号',
+        tel: '请输入正确的手机号'
       },
       name: {
         required: '请填写姓名'
+      },
+      email: {
+        email: '请输入正确的邮箱'
       }
     }
     var validate = new WxValidate(rules, message);

@@ -1,6 +1,7 @@
 <view class="container">
   <block wx:for="{{shipper}}">
     <view class="panel">
+    <!-- <icon type="clear" size="14" class="clear" bindtap="del"></icon> -->
       <view>
         <text>联系人：</text>
         <text>{{item.contacts}}</text>

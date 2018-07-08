@@ -10,7 +10,7 @@
     </view>
     <view class="item">
       <label>联系电话</label>
-      <input name="cellphone"></input>
+      <input name="cellphone" type="number"></input>
     </view>
     <view class="item">
       <label>客户类型</label>

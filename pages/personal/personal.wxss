@@ -40,3 +40,6 @@ page {
   padding-left: 20rpx;
   flex-grow: 1;
 }
+button {
+  border-radius: 0;
+}

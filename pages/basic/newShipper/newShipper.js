@@ -117,9 +117,11 @@ Page({
         required: true
       },
       cellphone: {
-        required: true
+        required: true,
+        tel: true
       },
       type: {
+        required: true,
         digits: true
       }
     }
@@ -131,10 +133,11 @@ Page({
         required: '请填写联系人'
       },
       cellphone: {
-        required: '请填写联系电话'
+        required: '请填写联系电话',
+        tel: '请输入正确的电话号码'
       },
       type: {
-        digits: '请选择客户类型'
+        required: '请选择客户类型'
       }
     }
     var validate = new WxValidate(rules, message);

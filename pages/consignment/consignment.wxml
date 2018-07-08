@@ -19,7 +19,7 @@
       </view>
       <view>
         <label>件数</label>
-        <input name="num" placeholder="件数" bindblur="cost"></input>
+        <input name="num" placeholder="件数" bindblur="cost" type="number"></input>
       </view>
       <view>
         <label>重量</label>

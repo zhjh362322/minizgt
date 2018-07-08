@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/track/track",
     "pages/personal/personal",
     "pages/basic/newPlant/newPlant",
     "pages/login/login",
     "pages/basic/newShipper/newShipper",
-    "pages/track/track",
     "pages/consignment/consignment",
     "pages/personal/shipper/shipper",
     "pages/orderList/orderList",
